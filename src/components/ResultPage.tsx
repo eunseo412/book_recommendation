@@ -39,7 +39,13 @@ const ResultPage: React.FC<ResultPageProps> = ({ recommendedBook, userScores, on
       <div className="result-container">
         <div className="book-hero">
           <div className="book-cover-container">
-            <img src={recommendedBook.coverUrl} alt={recommendedBook.title} className="book-cover" />
+            <div className="virtual-book-cover" style={{ backgroundColor: recommendedBook.moodColor }}>
+              <div className="cover-spine"></div>
+              <div className="cover-content">
+                <h3 className="cover-title">{recommendedBook.title}</h3>
+                <p className="cover-author">{recommendedBook.author}</p>
+              </div>
+            </div>
           </div>
           <div className="book-info">
             <h1 className="book-title">{recommendedBook.title}</h1>
