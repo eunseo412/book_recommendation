@@ -1,0 +1,56 @@
+[
+  {
+    "id": "q1",
+    "text": "How do you typically feel at the end of a long day?",
+    "options": [
+      { "text": "Completely drained and overwhelmed", "score": { "axis": "stress", "value": 0.9 } },
+      { "text": "A bit tired but mostly fine", "score": { "axis": "stress", "value": 0.4 } },
+      { "text": "Energized and ready for more", "score": { "axis": "stress", "value": 0.1 } }
+    ]
+  },
+  {
+    "id": "q2",
+    "text": "When you encounter a problem, what is your first instinct?",
+    "options": [
+      { "text": "Break it down into logical steps", "score": { "axis": "logic", "value": 1.0 } },
+      { "text": "Go with my gut feeling", "score": { "axis": "logic", "value": 0.3 } },
+      { "text": "Ask someone else for help", "score": { "axis": "logic", "value": 0.5 } }
+    ]
+  },
+  {
+    "id": "q3",
+    "text": "How often do you find yourself daydreaming about being somewhere else?",
+    "options": [
+      { "text": "Almost constantly", "score": { "axis": "escapism", "value": 1.0 } },
+      { "text": "Occasionally, when I'm bored", "score": { "axis": "escapism", "value": 0.5 } },
+      { "text": "Rarely, I prefer to stay grounded", "score": { "axis": "escapism", "value": 0.1 } }
+    ]
+  },
+  {
+    "id": "q4",
+    "text": "How do you react to tight deadlines?",
+    "options": [
+      { "text": "I feel high pressure and anxiety", "score": { "axis": "stress", "value": 0.8 } },
+      { "text": "I focus and get it done", "score": { "axis": "stress", "value": 0.5 } },
+      { "text": "I work better under pressure", "score": { "axis": "stress", "value": 0.2 } }
+    ]
+  },
+  {
+    "id": "q5",
+    "text": "What kind of entertainment do you prefer?",
+    "options": [
+      { "text": "Documentaries or non-fiction", "score": { "axis": "logic", "value": 0.9 } },
+      { "text": "High fantasy or sci-fi adventures", "score": { "axis": "escapism", "value": 0.9 } },
+      { "text": "Realistic dramas", "score": { "axis": "logic", "value": 0.4 } }
+    ]
+  },
+  {
+    "id": "q6",
+    "text": "When reading, do you prefer a world that mirrors reality or one that is entirely different?",
+    "options": [
+      { "text": "Entirely different world", "score": { "axis": "escapism", "value": 1.0 } },
+      { "text": "Mirror of reality", "score": { "axis": "escapism", "value": 0.1 } },
+      { "text": "A mix of both", "score": { "axis": "escapism", "value": 0.5 } }
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "coverUrl": "https://covers.openlibrary.org/b/id/8235233-L.jpg",
+    "synopsis": "A reluctant Hobbit, Bilbo Baggins, sets out on an unexpected journey to reclaim a stolen treasure from a dragon.",
+    "themes": ["Adventure", "Bravery", "Greed"],
+    "psychologicalProfile": {
+      "stress": 0.3,
+      "escapism": 0.9,
+      "logic": 0.4
+    },
+    "moodColor": "#4A7023"
+  },
+  {
+    "id": "2",
+    "title": "Project Hail Mary",
+    "author": "Andy Weir",
+    "coverUrl": "https://covers.openlibrary.org/b/id/10547012-L.jpg",
+    "synopsis": "A lone astronaut must save humanity from an extinction-level threat using science, logic, and an unexpected ally.",
+    "themes": ["Science", "Survival", "Friendship"],
+    "psychologicalProfile": {
+      "stress": 0.7,
+      "escapism": 0.5,
+      "logic": 0.9
+    },
+    "moodColor": "#1A237E"
+  },
+  {
+    "id": "3",
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "coverUrl": "https://covers.openlibrary.org/b/id/10427814-L.jpg",
+    "synopsis": "A famous painter shoots her husband five times in the face and then never speaks another word.",
+    "themes": ["Mystery", "Psychological Thriller", "Trauma"],
+    "psychologicalProfile": {
+      "stress": 0.8,
+      "escapism": 0.3,
+      "logic": 0.6
+    },
+    "moodColor": "#424242"
+  },
+  {
+    "id": "4",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "coverUrl": "https://covers.openlibrary.org/b/id/12836331-L.jpg",
+    "synopsis": "An easy and proven way to build good habits and break bad ones.",
+    "themes": ["Self-Improvement", "Productivity", "Psychology"],
+    "psychologicalProfile": {
+      "stress": 0.2,
+      "escapism": 0.1,
+      "logic": 0.8
+    },
+    "moodColor": "#FFD54F"
+  },
+  {
+    "id": "5",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "coverUrl": "https://covers.openlibrary.org/b/id/10431326-L.jpg",
+    "synopsis": "A story of wealth, love, and the American Dream in the Roaring Twenties.",
+    "themes": ["Society", "Obsession", "Class"],
+    "psychologicalProfile": {
+      "stress": 0.5,
+      "escapism": 0.6,
+      "logic": 0.3
+    },
+    "moodColor": "#C5B358"
+  },
+  {
+    "id": "6",
+    "title": "The Night Circus",
+    "author": "Erin Morgenstern",
+    "coverUrl": "https://covers.openlibrary.org/b/id/8354676-L.jpg",
+    "synopsis": "Two young magicians are pitted against each other in a magical competition within a mysterious circus.",
+    "themes": ["Magic", "Romance", "Competition"],
+    "psychologicalProfile": {
+      "stress": 0.4,
+      "escapism": 0.95,
+      "logic": 0.2
+    },
+    "moodColor": "#121212"
+  }
+]
