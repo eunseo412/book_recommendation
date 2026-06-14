@@ -1,85 +1,73 @@
 # 📚 Psychological Book Recommender
 
-An interactive web application that assesses your current state of mind through a curated psychological assessment and recommends the perfect book to match your mood.
+An interactive, visually rich web application that provides personalized book recommendations based on a user's current psychological state.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
-![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite)
+## 🌟 What is this Project?
 
-## 🌟 Overview
+This web application aims to solve "decision fatigue" for readers by providing a single, logically-reasoned book recommendation. Instead of a generic list, it uses a psychological assessment to understand the user's current mood and mental state, mapping those results to a curated database of literature.
 
-The **Psychological Book Recommender** addresses "decision fatigue" in choosing what to read next. By analyzing three core psychological dimensions—**Stress**, **Escapism**, and **Logic**—the app logically maps your current mindset to a curated database of literature.
+The core experience consists of:
+1.  **A Psychological Assessment:** A targeted quiz measuring Stress, Escapism, and Analytical Thinking.
+2.  **Logical Mapping:** A mathematical recommendation engine (Euclidean Distance) that pairs user results with book metadata.
+3.  **Rich Visual Results:** A dedicated results page featuring dynamic "virtual book covers" and a personalized explanation of "Why this book?"
 
-## ✨ Key Features
+## 🛠️ Tools & Technologies
 
--   **🧠 Psychological Assessment:** A sequence of interactive questions designed to measure your emotional and mental state.
--   **⚖️ Euclidean Distance Algorithm:** A logical recommendation engine that calculates the closest match between your profile and book metadata.
--   **📖 Dynamic Virtual Covers:** Custom CSS-generated book covers that adapt to the recommended book's "mood color."
--   **🔍 Personalized Reasoning:** A detailed "Why this book?" section explaining the logical connection between your results and the recommendation.
--   **🎨 Visually Rich UI:** A modern, calming aesthetic built with Vanilla CSS and responsive design.
+This project was developed using a modern, efficient development stack:
 
-## 🛠️ Tech Stack
+-   **Gemini CLI:** Used as the primary AI-driven development agent for project planning (PRD), architecture design, implementation, and documentation.
+-   **React 19 & TypeScript:** The foundation for a robust, type-safe, and interactive user interface.
+-   **Vite:** A lightning-fast build tool and development server.
+-   **Vanilla CSS:** Pure CSS was used for all styling to ensure high performance and complete creative control without the overhead of external UI libraries.
+-   **Vercel:** Chosen for seamless production deployment and hosting.
 
--   **Frontend:** React 19 (TypeScript)
--   **Build Tool:** Vite
--   **Styling:** Vanilla CSS (no external UI libraries for maximum customizability)
--   **Data Storage:** Local JSON-based curated database
--   **Deployment:** Vercel
+## 📂 Folder Structure
+
+The project follows a clean, modular organization:
+
+```text
+A4/
+├── src/
+│   ├── components/      # Functional React components (UI units)
+│   │   ├── LandingPage.tsx   # Welcome screen with CSS artwork
+│   │   ├── Quiz.tsx          # Interactive assessment logic
+│   │   └── ResultPage.tsx    # Recommendation engine output & dynamic visuals
+│   ├── data/            # Static JSON "databases"
+│   │   ├── books.json        # Curated book list with psychological metadata
+│   │   └── questions.json    # The psychological assessment questions
+│   ├── styles/          # Pure Vanilla CSS files for each component
+│   │   ├── LandingPage.css
+│   │   ├── Quiz.css
+│   │   └── ResultPage.css
+│   ├── types.ts         # Centralized TypeScript interfaces/types
+│   ├── App.tsx          # Root component managing application state & routing
+│   └── main.tsx         # Application entry point
+├── public/              # Static assets (favicons, etc.)
+├── book-recommender-prd.md # The official Product Requirements Document
+├── README.md            # Project documentation (this file)
+├── package.json         # Dependency management & build scripts
+└── vite.config.ts       # Vite configuration
+```
+
+## 🧠 Recommendation Logic: The Algorithm
+
+The application measures users across three psychological axes (scored 0.0 to 1.0):
+1.  **Stress:** Measures current mental pressure.
+2.  **Escapism:** Measures the need to "get away" into a fictional world.
+3.  **Logic:** Measures the preference for structured, analytical narratives.
+
+The recommendation engine calculates the **Euclidean Distance** between the user's result vector and the metadata vectors of every book in the database:
+
+$$d(p, q) = \sqrt{\sum_{i=1}^{n} (p_i - q_i)^2}$$
+
+The book with the **minimum distance** (the "closest match") is presented to the user.
 
 ## 🚀 Getting Started
 
-### Prerequisites
-
--   Node.js (v18 or higher)
--   npm or yarn
-
-### Installation
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-username/A4.git
-    cd A4
-    ```
-
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
-
-3.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
-
-4.  **Build for production:**
-    ```bash
-    npm run build
-    ```
-
-## 🧠 How it Works: The Recommendation Logic
-
-The app measures users across three axes (0.0 to 1.0):
-1.  **Stress:** Current level of mental pressure or fatigue.
-2.  **Escapism:** The desire to disconnect from reality and enter an immersive world.
-3.  **Logic:** Preference for analytical thinking and structured narratives.
-
-The engine uses the **Euclidean Distance** formula to find the most compatible book:
-
-$$d(p, q) = \sqrt{(p_1 - q_1)^2 + (p_2 - q_2)^2 + (p_3 - q_3)^2}$$
-
-Where $p$ is the user's score and $q$ is the book's psychological profile. The book with the minimum distance is selected.
-
-## 📂 Project Structure
-
-```text
-src/
-├── components/      # React functional components
-├── data/            # JSON databases (books, questions)
-├── styles/          # Vanilla CSS modules
-├── types.ts         # TypeScript interfaces
-└── App.tsx          # Main application logic
-```
+1.  **Install:** `npm install`
+2.  **Develop:** `npm run dev`
+3.  **Build:** `npm run build`
+4.  **Deploy:** `vercel --prod`
 
 ## 📝 License
 
