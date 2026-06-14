@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# 📚 Psychological Book Recommender
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web application that assesses your current state of mind through a curated psychological assessment and recommends the perfect book to match your mood.
 
-Currently, two official plugins are available:
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Overview
 
-## React Compiler
+The **Psychological Book Recommender** addresses "decision fatigue" in choosing what to read next. By analyzing three core psychological dimensions—**Stress**, **Escapism**, and **Logic**—the app logically maps your current mindset to a curated database of literature.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features
 
-## Expanding the ESLint configuration
+-   **🧠 Psychological Assessment:** A sequence of interactive questions designed to measure your emotional and mental state.
+-   **⚖️ Euclidean Distance Algorithm:** A logical recommendation engine that calculates the closest match between your profile and book metadata.
+-   **📖 Dynamic Virtual Covers:** Custom CSS-generated book covers that adapt to the recommended book's "mood color."
+-   **🔍 Personalized Reasoning:** A detailed "Why this book?" section explaining the logical connection between your results and the recommendation.
+-   **🎨 Visually Rich UI:** A modern, calming aesthetic built with Vanilla CSS and responsive design.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-   **Frontend:** React 19 (TypeScript)
+-   **Build Tool:** Vite
+-   **Styling:** Vanilla CSS (no external UI libraries for maximum customizability)
+-   **Data Storage:** Local JSON-based curated database
+-   **Deployment:** Vercel
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+-   Node.js (v18 or higher)
+-   npm or yarn
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/A4.git
+    cd A4
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production:**
+    ```bash
+    npm run build
+    ```
+
+## 🧠 How it Works: The Recommendation Logic
+
+The app measures users across three axes (0.0 to 1.0):
+1.  **Stress:** Current level of mental pressure or fatigue.
+2.  **Escapism:** The desire to disconnect from reality and enter an immersive world.
+3.  **Logic:** Preference for analytical thinking and structured narratives.
+
+The engine uses the **Euclidean Distance** formula to find the most compatible book:
+
+$$d(p, q) = \sqrt{(p_1 - q_1)^2 + (p_2 - q_2)^2 + (p_3 - q_3)^2}$$
+
+Where $p$ is the user's score and $q$ is the book's psychological profile. The book with the minimum distance is selected.
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/      # React functional components
+├── data/            # JSON databases (books, questions)
+├── styles/          # Vanilla CSS modules
+├── types.ts         # TypeScript interfaces
+└── App.tsx          # Main application logic
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📝 License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is licensed under the MIT License.

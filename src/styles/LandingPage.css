@@ -52,16 +52,69 @@
 
 .hero-image-container {
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--accent-bg);
   border-radius: 20px;
+  border: 1px solid var(--accent-border);
+  position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow);
 }
 
-.hero-image {
+.book-illustration {
+  width: 180px;
+  height: 120px;
+  background: var(--bg);
+  border: 2px solid var(--text-h);
+  border-radius: 4px 10px 10px 4px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 10px 10px 0 var(--accent);
+}
+
+.book-spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  background: var(--accent);
+  border-right: 2px solid var(--text-h);
+}
+
+.book-pages {
   width: 100%;
-  height: auto;
-  display: block;
+  padding: 20px 20px 20px 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.page-line {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+}
+
+.page-line:last-child {
+  width: 60%;
+}
+
+.book-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: var(--accent);
+  filter: blur(80px);
+  opacity: 0.2;
+  z-index: -1;
 }
 
 @media (max-width: 768px) {

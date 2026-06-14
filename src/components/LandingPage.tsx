@@ -19,7 +19,15 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
         </button>
       </div>
       <div className="hero-image-container">
-        <img src="/src/assets/hero.png" alt="Books and Mind" className="hero-image" />
+        <div className="book-illustration">
+          <div className="book-spine"></div>
+          <div className="book-pages">
+            <div className="page-line"></div>
+            <div className="page-line"></div>
+            <div className="page-line"></div>
+          </div>
+          <div className="book-glow"></div>
+        </div>
       </div>
     </div>
   );
